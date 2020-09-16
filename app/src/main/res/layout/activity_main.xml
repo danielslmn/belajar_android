@@ -9,236 +9,201 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/backgroundPutih"
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:src="@drawable/rectanglewhite"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="232dp" />
-
-    <ImageView
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:src="@drawable/squareblue"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="267dp" />
-
-    <ImageView
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:src="@drawable/squaregreen"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="267dp" />
-
-    <ImageView
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:src="@drawable/squarered"
-        tools:layout_editor_absoluteX="274dp"
-        tools:layout_editor_absoluteY="267dp" />
-
-    <ImageView
-        android:layout_width="350dp"
-        android:layout_height="100dp"
-        android:src="@drawable/rectanglelightblue"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="452dp" />
-
-    <ImageView
-        android:layout_width="350dp"
-        android:layout_height="100dp"
-        android:src="@drawable/rectanglelightblue"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="578dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/karla_bold"
-        android:text="Indonesia"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052" />
+        tools:layout_editor_absoluteX="0dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLookUpStatusCases"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/getToKnowMore"
+        app:layout_constraintTop_toTopOf="@id/backgroundPutih"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/btnHotline"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/rectanglelightblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="@font/karla_bold"-->
+<!--        android:text="Indonesia"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat"-->
+<!--        android:textColor="#ffffff"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.052" />-->
 
     <ImageView
+        android:id="@+id/virusCorona"
         android:layout_width="157dp"
         android:layout_height="120dp"
+        android:layout_marginEnd="236dp"
+        android:layout_marginBottom="532dp"
         android:src="@drawable/redcovidtransparent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="83dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
+        android:id="@+id/imageView9"
         android:layout_width="74dp"
         android:layout_height="52dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="80dp"
         android:src="@drawable/sirentransparent"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="597dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
+        android:id="@+id/gambarLokasi"
         android:layout_width="56dp"
         android:layout_height="45dp"
+        android:layout_marginEnd="316dp"
+        android:layout_marginBottom="208dp"
         android:src="@drawable/globalmaptransparent"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="482dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/karla_bold"
         android:text="86251"
         android:textColor="#ffffff"
         android:textSize="40sp"
-        tools:layout_editor_absoluteX="230dp"
-        tools:layout_editor_absoluteY="114dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/virusCorona"
+        app:layout_constraintBottom_toTopOf="@id/totalCases"
+        app:layout_constraintStart_toEndOf="@id/virusCorona"/>
 
     <TextView
+        android:id="@+id/totalCases"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="84dp"
         android:fontFamily="@font/karla_regular"
         android:text="Total Cases"
         android:textColor="#ffffff"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="243dp"
-        tools:layout_editor_absoluteY="161dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView7"
+        app:layout_constraintBottom_toBottomOf="@id/virusCorona"/>
 
     <TextView
+        android:id="@+id/getToKnowMore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/rubik_regular"
-        android:text="Positive"
-        android:textColor="#ffffff"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="333dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/karla_regular"
-        android:text="Recovered"
-        android:textColor="#ffffff"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="333dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/karla_regular"
-        android:text="Deaths"
-        android:textColor="#ffffff"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="303dp"
-        tools:layout_editor_absoluteY="334dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="300dp"
         android:fontFamily="@font/rubik_bold"
         android:text="Get to know more"
         android:textColor="#25287a"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="408dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="220dp"
+        android:layout_marginBottom="236dp"
         android:fontFamily="@font/rubik_bold"
         android:text="Look up"
         android:textColor="#25287a"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="475dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="148dp"
+        android:layout_marginBottom="196dp"
         android:fontFamily="@font/karla_regular"
         android:text="See details by province all over Indonesia"
         android:textColor="#757575"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="506dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
+        android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="220dp"
+        android:layout_marginBottom="108dp"
         android:fontFamily="@font/rubik_bold"
         android:text="Hotline"
         android:textColor="#25287a"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="597dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="68dp"
         android:fontFamily="@font/karla_regular"
         android:text="Check emergency number to contact"
         android:textColor="#757575"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="632dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
+        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/karla_bold"
-        android:text="36977"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="300dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/karla_bold"
-        android:text="45401"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="300dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/karla_bold"
-        android:text="4143"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="303dp"
-        tools:layout_editor_absoluteY="300dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="196dp"
         android:fontFamily="@font/karla_regular"
         android:text=">"
         android:textColor="#25287a"
         android:textSize="50sp"
-        tools:layout_editor_absoluteX="320dp"
-        tools:layout_editor_absoluteY="475dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="68dp"
         android:fontFamily="@font/karla_regular"
         android:text=">"
         android:textColor="#25287a"
         android:textSize="50sp"
-        tools:layout_editor_absoluteX="320dp"
-        tools:layout_editor_absoluteY="603dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/informationbutton"
-        tools:layout_editor_absoluteX="355dp"
-        tools:layout_editor_absoluteY="31dp" />
+    <Button
+        android:id="@+id/btnLookup"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="180dp"
+        android:background="@drawable/rectanglelightblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
